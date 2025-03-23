@@ -6,3 +6,9 @@ Public Function OpenDataBase() As Boolean
   
   
 End
+
+Public Function SaveItem(table As String, field As String) As Boolean
+  
+  
+  
+End

@@ -1,0 +1,22 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,64,64)
+  { TabPanel1 TabPanel
+    MoveScaled(1,2,62,16)
+    Index = 0
+    Text = ("Tab 1")
+    { TextBox1 TextBox
+      MoveScaled(2,2,58,5)
+    }
+    Index = 0
+  }
+  { Button1 Button
+    MoveScaled(39,20,11,4)
+    Text = ("Cancel")
+  }
+  { Button2 Button
+    MoveScaled(52,20,10,4)
+    Text = ("Save")
+  }
+}

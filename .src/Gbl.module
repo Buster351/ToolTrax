@@ -1,16 +1,34 @@
 ' Gambas module file
 
-Private DBconn As Connection
+Private DBconn As New Connection
  
 Public Function OpenDataBase() As Boolean
   
   'some code goes here
-  
-  
+  With DBconn
+    .Type = "sqlite3"
+    .Host = Application.Path
+  'Print Application.Path
+    .Name = "tooltrax.sqlite3"
+  Try .Open()
+  End With
+  Return True
 End
 
 Public Function SaveItem(table As String, field As String) As Boolean
   
   
+  
+End
+
+Public Function CreateRecord(table As String) As Result
+  
+  Return DBconn.Create(table)
+  
+End
+ Public Function CommitResult(res As Result)
+  
+  res.Update()
+  DBconn.Commit
   
 End

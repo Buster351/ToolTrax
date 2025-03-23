@@ -1,11 +1,20 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,133,73)
+  MoveScaled(0,0,133,77)
+  { addTool_M Menu
+    Text = ("Add Tool")
+  }
+  { adduser_M Menu
+    Text = ("Add User")
+  }
   { TabPanel1 TabPanel
     MoveScaled(1,2,131,69)
     Index = 0
     Text = ("Tools")
     Index = 0
+  }
+  { Label1 Label
+    MoveScaled(1,73,19,2)
   }
 }

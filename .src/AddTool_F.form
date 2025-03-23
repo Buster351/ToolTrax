@@ -1,0 +1,24 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,64,64)
+  Text = ("Add User")
+  { TabPanel1 TabPanel
+    MoveScaled(1,2,62,18)
+    Index = 0
+    Text = ("User")
+    { TextBox1 TextBox
+      MoveScaled(1,2,59,7)
+      Text = ("Name")
+    }
+    Index = 0
+  }
+  { Button1 Button
+    MoveScaled(52,23,10,5)
+    Text = ("Save")
+  }
+  { Button2 Button
+    MoveScaled(40,23,10,4)
+    Text = ("Cancel")
+  }
+}

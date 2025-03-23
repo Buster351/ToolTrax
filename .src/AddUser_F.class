@@ -1,0 +1,12 @@
+' Gambas class file
+
+
+Public Sub Button2_Click()
+
+  Dim res As Result
+  res = Gbl.CreateRecord("users")
+  res!name = TextBox1.Text
+  res!date = Now
+  Gbl.CommitResult(res)
+  Me.Close
+End

@@ -1,2 +1,16 @@
 ' Gambas class file
 
+
+Public Sub Form_Open()
+
+  If Gbl.OpenDataBase() Then 
+    Label1.text = "Database Open"
+  Endif
+
+End
+
+Public Sub adduser_M_Click()
+
+AddUser_F.ShowModal  
+
+End

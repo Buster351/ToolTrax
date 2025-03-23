@@ -1,2 +1,8 @@
 ' Gambas module file
 
+Public Function OpenDataBase() As Boolean
+  
+  'some code goes here
+  
+  
+End

@@ -2,4 +2,10 @@
 
 { Form Form
   MoveScaled(0,0,133,73)
+  { TabPanel1 TabPanel
+    MoveScaled(1,2,131,69)
+    Index = 0
+    Text = ("Tools")
+    Index = 0
+  }
 }

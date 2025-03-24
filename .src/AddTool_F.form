@@ -2,11 +2,11 @@
 
 { Form Form
   MoveScaled(0,0,64,64)
-  Text = ("Add User")
+  Text = ("Add Tool")
   { TabPanel1 TabPanel
     MoveScaled(1,2,62,18)
     Index = 0
-    Text = ("User")
+    Text = ("Tool")
     { TextBox1 TextBox
       MoveScaled(1,2,59,7)
       Text = ("Name")
@@ -14,11 +14,21 @@
     Index = 0
   }
   { Button1 Button
-    MoveScaled(52,23,10,5)
+    MoveScaled(53,57,10,5)
     Text = ("Save")
   }
   { Button2 Button
-    MoveScaled(40,23,10,4)
+    MoveScaled(41,57,10,5)
     Text = ("Cancel")
+  }
+  { TabPanel2 TabPanel
+    MoveScaled(1,22,62,15)
+    Index = 0
+    Text = ("Part Number")
+    { TextBox2 TextBox
+      MoveScaled(2,1,58,8)
+      Text = ("Part Number")
+    }
+    Index = 0
   }
 }

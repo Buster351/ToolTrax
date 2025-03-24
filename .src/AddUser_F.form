@@ -2,10 +2,11 @@
 
 { Form Form
   MoveScaled(0,0,64,64)
+  Text = ("Add User")
   { TabPanel1 TabPanel
     MoveScaled(1,2,62,16)
     Index = 0
-    Text = ("Tab 1")
+    Text = ("Name")
     { TextBox1 TextBox
       MoveScaled(2,2,58,5)
     }

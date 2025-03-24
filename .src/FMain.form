@@ -12,6 +12,12 @@
     MoveScaled(1,2,131,69)
     Index = 0
     Text = ("Tools")
+    { DataCombo1 DataCombo
+      MoveScaled(1,3,33,8)
+    }
+    { ComboBox1 ComboBox
+      MoveScaled(1,12,34,7)
+    }
     Index = 0
   }
   { Label1 Label

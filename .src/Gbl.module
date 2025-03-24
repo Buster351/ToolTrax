@@ -32,3 +32,14 @@ End
   DBconn.Commit
   
 End
+
+Public Sub FillComboWithTable(table As String, comb As ComboBox)
+  
+  Dim res As Result
+  res = DBconn.Find(table)
+  comb.Clear
+  For Each res
+    comb.Add(res!name)
+  Next
+  comb.Index = 0   
+End

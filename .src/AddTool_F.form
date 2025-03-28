@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,64,64)
+  MoveScaled(0,0,64,76)
   Text = ("Add Tool")
   { TabPanel1 TabPanel
     MoveScaled(1,2,62,18)
@@ -28,6 +28,15 @@
     { TextBox2 TextBox
       MoveScaled(2,1,58,8)
       Text = ("Part Number")
+    }
+    Index = 0
+  }
+  { TabPanel3 TabPanel
+    MoveScaled(1,40,39,33)
+    Index = 0
+    Text = ("Picture")
+    { PictureBox1 PictureBox
+      MoveScaled(1,2,37,25)
     }
     Index = 0
   }

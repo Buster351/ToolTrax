@@ -14,8 +14,22 @@ Public Sub Button1_Click()
   res!description = TextBox1.Text
   res!partnumber = TextBox2.Text
   res!cost = 1.0
+  res!picture = PictureBox1.Picture.ToString("PNG")
   res!date = Now
   Gbl.CommitResult(res)
   Me.Close
 
+End
+
+Public Sub PictureBox1_DblClick()
+
+  Dialog.Title = "Choose a file"
+  Dialog.Filter = ["*.png", "Png Files", "*", "All files"]
+  Dialog.Path = "."
+    If Dialog.OpenFile() Then
+      Return ' User pressed Cancel -
+    Endif
+  PictureBox1.Picture = Gbl.load_picture_scaled(Dialog.Path, 200, 200)
+  
+  
 End

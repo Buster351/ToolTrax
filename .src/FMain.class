@@ -13,7 +13,7 @@ End
 Public Sub adduser_M_Click()
 
 AddUser_F.ShowModal  
-
+Gbl.FillComboWithTable("users", ComboBox1)
 End
 
 Public Sub addTool_M_Click()

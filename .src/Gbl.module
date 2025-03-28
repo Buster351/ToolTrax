@@ -43,3 +43,42 @@ Public Sub FillComboWithTable(table As String, comb As ComboBox)
   Next
   comb.Index = 0   
 End
+Public Function Scale_Picture(p As Picture, width As Integer, height As Integer, aspect As Boolean) As Picture
+  
+'  Dim img As Picture
+  Dim newImg As New Image
+  Dim ratioX As Float
+  Dim ratioY As Float
+  Dim ratio As Float
+  Dim newWidth As Integer
+  Dim newHeight As Integer
+  
+    
+  ratioX = width / p.Width
+  ratioY = height / p.Height
+  
+  If ratioX < ratioY 
+   ratio = ratioX
+  Else
+    ratio = ratioY
+  Endif
+  newWidth = p.Width * ratio
+  newHeight = p.Height * ratio
+  'newimg = New Image(newWidth, newHeight)
+  If aspect
+    newImg = p.Image.Stretch(newWidth, newHeight)
+  Else
+    newImg = p.Image.Stretch(width, height)
+  Endif
+  
+  Return newImg.Picture
+  Catch
+End
+
+Public Function Load_picture_scaled(pic As String, w As Integer, h As Integer) As Picture
+  
+  Dim p As Picture
+  p = Picture.Load(pic)
+  Return Scale_Picture(p, w, h, True)
+  
+End

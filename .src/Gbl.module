@@ -82,3 +82,20 @@ Public Function Load_picture_scaled(pic As String, w As Integer, h As Integer) A
   Return Scale_Picture(p, w, h, True)
   
 End
+
+Public Function Display_Tools(t As TreeView)
+
+Dim res As Result
+Dim pic As Picture
+
+res = DBconn.Find("tools")
+  t.Clear
+  
+  For Each res
+    If res!picture.length <> 0 Then
+      pic = Scale_Picture(Picture.FromString(res!picture), 50, 50, True)
+    Endif
+    t.Add(res!id, res!description, pic)  
+  Next
+  
+End

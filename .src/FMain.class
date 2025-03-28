@@ -22,3 +22,9 @@ Public Sub addTool_M_Click()
   
 
 End
+
+Public Sub Supply_menu_Click()
+
+  AddSupply_F.ShowModal
+
+End

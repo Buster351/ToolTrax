@@ -8,6 +8,9 @@
   { adduser_M Menu
     Text = ("Add User")
   }
+  { Supply_menu Menu
+    Text = ("Supply")
+  }
   { TabPanel1 TabPanel
     MoveScaled(1,2,131,69)
     Index = 0

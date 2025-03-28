@@ -1,0 +1,14 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,112,64)
+  Text = ("Supply")
+  { Tools TreeView
+    MoveScaled(4,13,87,45)
+    Mode = Select.Multiple
+    ShowCheck = True
+  }
+  { Button1 Button
+    MoveScaled(31,2,13,5)
+  }
+}

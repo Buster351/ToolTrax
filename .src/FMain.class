@@ -28,3 +28,16 @@ Public Sub Supply_menu_Click()
   AddSupply_F.ShowModal
 
 End
+
+Public Sub ComboBox1_Click()
+
+  
+
+End
+
+Public Sub ComboBox1_Change()
+
+  Dim person As Result
+  
+
+End

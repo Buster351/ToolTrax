@@ -4,11 +4,33 @@
   MoveScaled(0,0,112,64)
   Text = ("Supply")
   { Tools TreeView
-    MoveScaled(4,13,87,45)
+    MoveScaled(2,16,87,45)
     Mode = Select.Multiple
     ShowCheck = True
   }
-  { Button1 Button
-    MoveScaled(31,2,13,5)
+  { TabPanel1 TabPanel
+    MoveScaled(2,2,87,13)
+    Index = 0
+    Text = ("Tab 1")
+    { ComboBox1 ComboBox
+      MoveScaled(1,1,38,6)
+    }
+    { SpinBox1 SpinBox
+      MoveScaled(54,1,11,6)
+      MinValue = 1
+      Value = 1
+    }
+    { Label1 Label
+      MoveScaled(42,2,9,4)
+      Text = ("Quantity")
+    }
+    { Button1 Button
+      MoveScaled(73,1,13,6)
+      Text = ("Save")
+    }
+    Index = 0
+  }
+  { DateBox1 DateBox
+    MoveScaled(91,7,19,44)
   }
 }

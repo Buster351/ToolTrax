@@ -2,7 +2,7 @@
 
 Private DBconn As New Connection
  
-Public Function OpenDataBase() As Boolean
+ Public Function OpenDataBase() As Boolean
   
   'some code goes here
   With DBconn
@@ -26,12 +26,20 @@ Public Function CreateRecord(table As String) As Result
   Return DBconn.Create(table)
   
 End
- Public Function CommitResult(res As Result)
+
+ Public Function Update_Commit_Result(res As Result)
   
   res.Update()
   DBconn.Commit
   
 End
+
+Public Function Get_User_By_Name(name As String) As Result
+
+    Return DBconn.Find("users", "name = &1", name)  
+  
+End
+
 
 Public Sub FillComboWithTable(table As String, comb As ComboBox)
   
@@ -83,7 +91,7 @@ Public Function Load_picture_scaled(pic As String, w As Integer, h As Integer) A
   
 End
 
-Public Function Display_Tools(t As TreeView)
+Public Sub Display_Tools(t As TreeView)
 
 Dim res As Result
 Dim pic As Picture

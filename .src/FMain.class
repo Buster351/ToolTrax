@@ -38,6 +38,6 @@ End
 Public Sub ComboBox1_Change()
 
   Dim person As Result
-  
+ 
 
 End

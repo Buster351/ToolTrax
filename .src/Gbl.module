@@ -2,7 +2,7 @@
 
 Private DBconn As New Connection
  
- Public Function OpenDataBase() As Boolean
+Public Function OpenDataBase() As Boolean
   
   'some code goes here
   With DBconn
@@ -17,7 +17,7 @@ End
 
 Public Function SaveItem(table As String, field As String) As Boolean
   
-  
+  Print "shane"
   
 End
 
@@ -27,7 +27,7 @@ Public Function CreateRecord(table As String) As Result
   
 End
 
- Public Function Update_Commit_Result(res As Result)
+Public Function Update_Commit_Result(res As Result)
   
   res.Update()
   DBconn.Commit
@@ -51,6 +51,7 @@ Public Sub FillComboWithTable(table As String, comb As ComboBox)
   Next
   comb.Index = 0   
 End
+
 Public Function Scale_Picture(p As Picture, width As Integer, height As Integer, aspect As Boolean) As Picture
   
 '  Dim img As Picture

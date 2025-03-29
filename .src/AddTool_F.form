@@ -9,7 +9,7 @@
     Text = ("Tool")
     { TextBox1 TextBox
       MoveScaled(1,2,59,7)
-      Text = ("Name")
+      ToolTip = ("Add Description")
     }
     Index = 0
   }
@@ -27,7 +27,7 @@
     Text = ("Part Number")
     { TextBox2 TextBox
       MoveScaled(2,1,58,8)
-      Text = ("Part Number")
+      ToolTip = ("Add Part Number")
     }
     Index = 0
   }
@@ -37,6 +37,7 @@
     Text = ("Picture")
     { PictureBox1 PictureBox
       MoveScaled(1,2,37,25)
+      ToolTip = ("Double Click to Add Picture")
     }
     Index = 0
   }
@@ -46,6 +47,7 @@
     Text = ("Tab 1")
     { TreeView1 TreeView
       MoveScaled(2,2,75,63)
+      ToolTip = ("Tools In DataBase")
     }
     Index = 0
   }

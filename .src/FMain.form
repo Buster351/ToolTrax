@@ -17,12 +17,14 @@
     Text = ("Tools")
     { ComboBox1 ComboBox
       MoveScaled(1,1,34,7)
+      ToolTip = ("Select User")
     }
     { GridView1 GridView
       MoveScaled(93,9,36,54)
     }
     { TreeView1 TreeView
       MoveScaled(1,9,89,54)
+      ToolTip = ("Users Tools")
     }
     Index = 0
   }

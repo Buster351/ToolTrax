@@ -9,6 +9,7 @@
     Text = ("Name")
     { TextBox1 TextBox
       MoveScaled(2,2,58,5)
+      ToolTip = ("Enter User Name")
     }
     Index = 0
   }

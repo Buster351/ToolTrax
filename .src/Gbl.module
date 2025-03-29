@@ -122,8 +122,8 @@ Public Function GetToolById(id As Integer) As Result
 End
 
 Public Function GetPictureFromDB(res As Result) As Picture
-
-  Return ScalePicture(Picture.FromString(res!picture), 50, 50, True)
-  
+  If res!picture.length <> 0 Then
+    Return ScalePicture(Picture.FromString(res!picture), 50, 50, True)
+  Endif 
   
 End

@@ -5,7 +5,6 @@
   Text = ("Supply")
   { Tools TreeView
     MoveScaled(2,16,87,45)
-    Mode = Select.Multiple
     ShowCheck = True
   }
   { TabPanel1 TabPanel
@@ -31,6 +30,6 @@
     Index = 0
   }
   { DateBox1 DateBox
-    MoveScaled(91,7,19,44)
+    MoveScaled(90,7,21,14)
   }
 }

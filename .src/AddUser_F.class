@@ -7,7 +7,7 @@ Public Sub Button2_Click()
   res = Gbl.CreateRecord("users")
   res!name = TextBox1.Text
   res!date = Now
-  Gbl.CommitResult(res)
+  Gbl.UpdateCommitResult(res)
   Me.Close
 End
 

@@ -27,14 +27,14 @@ Public Function CreateRecord(table As String) As Result
   
 End
 
-Public Function Update_Commit_Result(res As Result)
+Public Function UpdateCommitResult(res As Result)
   
   res.Update()
   DBconn.Commit
   
 End
 
-Public Function Get_User_By_Name(name As String) As Result
+Public Function GetUserByName(name As String) As Result
 
     Return DBconn.Find("users", "name = &1", name)  
   
@@ -52,7 +52,7 @@ Public Sub FillComboWithTable(table As String, comb As ComboBox)
   comb.Index = 0   
 End
 
-Public Function Scale_Picture(p As Picture, width As Integer, height As Integer, aspect As Boolean) As Picture
+Public Function ScalePicture(p As Picture, width As Integer, height As Integer, aspect As Boolean) As Picture
   
 '  Dim img As Picture
   Dim newImg As New Image
@@ -84,15 +84,15 @@ Public Function Scale_Picture(p As Picture, width As Integer, height As Integer,
   Catch
 End
 
-Public Function Load_picture_scaled(pic As String, w As Integer, h As Integer) As Picture
+Public Function LoadPictureScaled(pic As String, w As Integer, h As Integer) As Picture
   
   Dim p As Picture
   p = Picture.Load(pic)
-  Return Scale_Picture(p, w, h, True)
+  Return ScalePicture(p, w, h, True)
   
 End
 
-Public Sub Display_Tools(t As TreeView)
+Public Sub DisplayTools(t As TreeView)
 
 Dim res As Result
 Dim pic As Picture
@@ -102,9 +102,28 @@ res = DBconn.Find("tools")
   
   For Each res
     If res!picture.length <> 0 Then
-      pic = Scale_Picture(Picture.FromString(res!picture), 50, 50, True)
+      pic = ScalePicture(Picture.FromString(res!picture), 50, 50, True)
     Endif
     t.Add(res!id, res!description, pic)  
   Next
+  
+End
+
+Public Function GetSuppliesByUserId(id As Integer) As Result
+  
+  Return DBconn.Find("supplies", "userid = &1", id)
+  
+End
+
+Public Function GetToolById(id As Integer) As Result
+  
+  Return DBconn.Find("tools", "id = &1", id)
+  
+End
+
+Public Function GetPictureFromDB(res As Result) As Picture
+
+  Return ScalePicture(Picture.FromString(res!picture), 50, 50, True)
+  
   
 End

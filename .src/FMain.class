@@ -38,6 +38,23 @@ End
 Public Sub ComboBox1_Change()
 
   Dim person As Result
- 
+  Dim tools As Result
+  Dim supplies As Result
+  Dim key As Integer
+  Dim d As Variant
+  
+  If ComboBox1.Text.Len >= 1 Then
+    
+    person = Gbl.GetUserByName(ComboBox1.Text)
+    Print person!id & "  " & person!name
+    supplies = Gbl.GetSuppliesByUserId(person!id)
+    TreeView1.Clear
+    TreeView1.Add(0, "Tools Supplied To " & person!name)
+      For Each supplies
+        tools = Gbl.GetToolById(supplies!toolid)
+        d = Date(supplies!date)
+        TreeView1.Add(supplies!id, supplies!number & " " & tools!description & "  " & Format(d, "dd.mm.yyyy"), Gbl.GetPictureFromDB(tools))
+      Next
+  Endif       
 
 End

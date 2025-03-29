@@ -3,7 +3,7 @@
 
 Public Sub Form_Open()
   Gbl.FillComboWithTable("users", ComboBox1)
-  Gbl.Display_Tools(Tools)
+  Gbl.DisplayTools(Tools)
 
 End
 
@@ -22,11 +22,11 @@ If Tools.Selected
   Print Tools.Selection[0]
   res = Gbl.CreateRecord("supplies")
   res!toolid = Tools.Selection[0]
-  person = Gbl.Get_User_By_Name(ComboBox1.Text)
+  person = Gbl.GetUserByName(ComboBox1.Text)
   res!userid = person!id
   res!number = SpinBox1.Value
   res!date = Now
-  Gbl.Update_Commit_Result(res)
+  Gbl.UpdateCommitResult(res)
   
 Endif 
 

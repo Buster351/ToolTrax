@@ -16,7 +16,7 @@ Public Sub Button1_Click()
   res!cost = 1.0
   res!picture = PictureBox1.Picture.ToString("PNG")
   res!date = Now
-  Gbl.CommitResult(res)
+  Gbl.UpdateCommitResult(res)
   Me.Close
 
 End
@@ -29,7 +29,13 @@ Public Sub PictureBox1_DblClick()
     If Dialog.OpenFile() Then
       Return ' User pressed Cancel -
     Endif
-  PictureBox1.Picture = Gbl.load_picture_scaled(Dialog.Path, 200, 200)
+  PictureBox1.Picture = Gbl.LoadPictureScaled(Dialog.Path, 200, 200)
   
   
+End
+
+Public Sub Form_Open()
+
+  Gbl.DisplayTools(TreeView1)
+
 End

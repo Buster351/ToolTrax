@@ -4,7 +4,8 @@
 Public Sub Form_Open()
   Gbl.FillComboWithTable("users", ComboBox1)
   Gbl.DisplayTools(Tools)
-
+  DateBox1.Value = Now
+  
 End
 
 Public Sub Tools_Select()
@@ -25,10 +26,16 @@ If Tools.Selected
   person = Gbl.GetUserByName(ComboBox1.Text)
   res!userid = person!id
   res!number = SpinBox1.Value
-  res!date = Now
+  res!date = DateBox1.Value
   Gbl.UpdateCommitResult(res)
   
 Endif 
 
   
+End
+
+Public Sub DateBox1_Change()
+
+  Print DateBox1.Value
+
 End

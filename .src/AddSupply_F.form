@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,112,64)
+  MoveScaled(0,0,125,64)
   Text = ("Supply")
   { Tools TreeView
     MoveScaled(2,16,87,45)
@@ -30,6 +30,6 @@
     Index = 0
   }
   { DateBox1 DateBox
-    MoveScaled(90,7,21,14)
+    MoveScaled(90,7,34,7)
   }
 }

@@ -8,6 +8,7 @@ Public Sub Form_Open()
   Endif
   
   Gbl.FillComboWithTable("users", ComboBox1)
+  SetUpGrid
 End
 
 Public Sub adduser_M_Click()
@@ -56,5 +57,72 @@ Public Sub ComboBox1_Change()
         TreeView1.Add(supplies!id, supplies!number & " " & tools!description & "  " & Format(d, "dd.mm.yyyy"), Gbl.GetPictureFromDB(tools))
       Next
   Endif       
-
+FillGrid
 End
+
+
+Public Sub SetUpGrid()
+  
+  With GridView1
+    .Columns.Count = 7
+  .Header = GridView.Horizontal
+  .Columns[0].Alignment = Align.Justify
+  .Columns[0].Title = "Quantity"
+  .Columns[0].Width = 70
+
+
+  .Columns[1].Title = "Image"
+  .Columns[1].Width = 70
+  .Columns[1].Alignment = Align.Center
+  
+  .Columns[2].Width = 300
+  .Columns[2].Alignment = Align.Center
+  .Columns[2].Title = "Description"
+  
+  .Columns[3].width = 100
+  .Columns[3].Title = "Date"
+  .Columns[3].Alignment = Align.Center
+  
+  .Columns[4].Width = 100
+  .Columns[4].Title = "Date"
+  .Columns[4].Alignment = Align.Center
+  
+  .Columns[5].Width = 150
+  .Columns[5].Title = "Location"
+  .Columns[5].Alignment = Align.Center
+  
+  .Columns[6].Width = 100
+  .Columns[6].Title = "Min Stock"
+  .Columns[6].Alignment = Align.Center
+  End With
+  
+End
+
+Public Sub FillGrid()
+  
+  Dim res As Result
+  Dim person As Result
+  Dim tools As Result
+  Dim supplies As Result
+  Dim d As Date
+  
+  If ComboBox1.Text.Len >= 1 Then
+    person = Gbl.GetUserByName(ComboBox1.Text)
+    supplies = Gbl.GetSuppliesByUserId(person!id)
+    GridView1.Clear
+    SetUpGrid
+    GridView1.Rows.Count = supplies.Count
+    For Each supplies
+      tools = Gbl.GetToolById(supplies!toolid)
+        'd = Date(supplies!date)
+        GridView1[supplies.Index, 0].text = supplies!number
+        GridView1.Rows.Height = 50
+        GridView1[supplies.Index, 1].Picture = Gbl.GetPictureFromDB(tools)
+        GridView1[supplies.Index, 2].text = tools!description
+        GridView1[supplies.Index, 3].text = Format(Date(supplies!date), "dd.mm.yyyy")
+        'TreeView1.Add(supplies!id, supplies!number & " " & tools!description & "  " & Format(d, "dd.mm.yyyy"), Gbl.GetPictureFromDB(tools))
+    Next
+  End If
+  
+End
+

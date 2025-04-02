@@ -20,10 +20,10 @@
       ToolTip = ("Select User")
     }
     { GridView1 GridView
-      MoveScaled(93,9,36,54)
+      MoveScaled(39,9,90,54)
     }
     { TreeView1 TreeView
-      MoveScaled(1,9,89,54)
+      MoveScaled(1,9,37,54)
       ToolTip = ("Users Tools")
     }
     Index = 0

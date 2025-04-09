@@ -2,14 +2,17 @@
 
 { Form Form
   MoveScaled(0,0,133,77)
-  { addTool_M Menu
-    Text = ("Add Tool")
-  }
-  { adduser_M Menu
-    Text = ("Add User")
-  }
-  { Supply_menu Menu
-    Text = ("Supply")
+  { Menu1 Menu
+    Text = ("Tools")
+    { addTool_M Menu
+      Text = ("Add Tool")
+    }
+    { adduser_M Menu
+      Text = ("Add User")
+    }
+    { Supply_menu Menu
+      Text = ("Supply")
+    }
   }
   { TabPanel1 TabPanel
     MoveScaled(1,2,131,69)
